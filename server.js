@@ -1,6 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
+const cors = require('cors');
+
+app.use(cors()); // Enable CORS for all routes
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
