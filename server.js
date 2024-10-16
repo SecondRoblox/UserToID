@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
 const cors = require('cors');
 
-const app = express(); // The app variable should be declared here
+const app = express();
 
 app.use(cors()); // Enable CORS for all routes
 
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(express.static('public')); // Serve static files
+app.use(express.static('public')); // Serve static files from the 'public' folder
 
 // Endpoint to fetch User ID
 app.post('/getUserID', async (req, res) => {
